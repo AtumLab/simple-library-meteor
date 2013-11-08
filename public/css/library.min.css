@@ -727,3 +727,6 @@ font-size: 14px;
 .product-info .compare-wish a:hover {
   color: #3abec0;
 }
+#breadcrumb a {
+color: #3abec0;
+}

@@ -3,8 +3,8 @@
     <ul class="thumbnails estante">
         {{#each books}}
         <li class="col-sm-2 animated">
-            <a href="#" class="thumbnail">
-                <img src="{{ img }}" alt="">
+            <a href="{{pathFor 'book'}}" class="thumbnail">
+                <img src="{{ cover }}" alt="">
             </a>
         </li>
         {{/each}}

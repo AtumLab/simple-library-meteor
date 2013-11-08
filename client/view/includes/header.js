@@ -11,5 +11,9 @@ Template.header.helpers({
 });
 
 Template.header.events({
-
+    // was in client/misc/logout.js
+    'click #logoutButton':function(event){
+        event.preventDefault();
+        Meteor.logout();
+    }
 });

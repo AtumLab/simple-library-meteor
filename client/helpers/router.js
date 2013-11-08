@@ -63,7 +63,14 @@ Router.map(function () {
 
         unload: function () {
             // before a new route is run
+        },
+        data: function () {
+            var params = this.params;
+            return {
+                book: Books.findOne(params._id)
+            }
         }
+
     });
 });
 
