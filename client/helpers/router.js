@@ -1,6 +1,10 @@
 Router.configure({
-    layoutTemplate: 'layout'
+    layoutTemplate: 'layout',
+    autoRender: false
 });
+
+// this hook will run on almost all routes
+Router.before(checkLoggedIn, {except: ['login', 'signup', 'forgotPassword']});
 
 Router.map(function () {
     /**
@@ -18,13 +22,13 @@ Router.map(function () {
      * The route's path is "/posts"
      * The route's template is inferred to be "posts"
      */
-    this.route('posts', {
-        path: '/posts',
-        template: 'posts'
+    this.route('books', {
+        path: '/books',
+        template: 'books'
     });
 
-    this.route('post', {
-        path: '/posts/:_id',
+    this.route('book', {
+        path: '/books/:_id',
         load: function () {
             // called on first load
             console.log('load');
@@ -54,7 +58,7 @@ Router.map(function () {
             var isFirstRun = this.isFirstRun;
 
             
-            this.render('post');
+            this.render('book');
         },
 
         unload: function () {
@@ -62,3 +66,7 @@ Router.map(function () {
         }
     });
 });
+
+function checkLoggedIn (){
+    console.log('checkLoggedIn');
+}

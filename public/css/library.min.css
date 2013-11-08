@@ -172,3 +172,8 @@ text-shadow: rgba(0, 0, 0, .5) 6px 5px 11px;
 .navbar-default .navbar-nav>li>a {
 color: #fff !important;
 }
+
+.navbar.navbar-fixed-top {
+min-height: 44px;
+border-width: 0;
+}

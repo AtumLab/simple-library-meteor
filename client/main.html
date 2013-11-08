@@ -22,59 +22,14 @@
 
     {{> header}}
 
+    {{renderRouter}}
+
     {{> footer}}
     
     {{> generalModal}}
+
 </body>
 
 <template name="layout">
     {{yield}}
-    layout
-</template>
-
-<template name="posts">
-    Posts
-</template>
-
-<template name="post">
-    Post
-</template>
-
-<template name="save">
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <h1>Books Showroom</h1>
-      <ul class="thumbnails estante">
-        <li class="col-sm-2 animated"> <a href="#" class="thumbnail"> <img src="/img/1.jpg" alt=""> </a> </li>
-        <li class="col-sm-2 animated"> <a href="#" class="thumbnail"> <img src="/img/2.jpg" alt=""> </a> </li>
-        <li class="col-sm-2 animated"> <a href="#" class="thumbnail"> <img src="/img/3.jpg" alt=""> </a> </li>
-        <li class="col-sm-2 animated"> <a href="#" class="thumbnail"> <img src="/img/4.jpg" alt=""> </a> </li>
-        <li class="col-sm-2 animated"> <a href="#" class="thumbnail"> <img src="/img/5.jpg" alt=""> </a> </li>
-        <div class="clearfix"></div>
-
-        <li class="col-sm-2 animated"> <a href="#" class="thumbnail"> <img src="/img/6.jpg" alt=""> </a> </li>
-        <li class="col-sm-2 animated"> <a href="#" class="thumbnail"> <img src="/img/1.jpg" alt=""> </a> </li>
-        <li class="col-sm-2 animated"> <a href="#" class="thumbnail"> <img src="/img/2.jpg" alt=""> </a> </li>
-        <li class="col-sm-2 animated"> <a href="#" class="thumbnail"> <img src="/img/3.jpg" alt=""> </a> </li>
-        <li class="col-sm-2 animated"> <a href="#" class="thumbnail"> <img src="/img/4.jpg" alt=""> </a> </li>
-        <div class="clearfix"></div>
-
-        <li class="col-sm-2 animated"> <a href="#" class="thumbnail"> <img src="/img/5.jpg" alt=""> </a> </li>
-        <li class="col-sm-2 animated"> <a href="#" class="thumbnail"> <img src="/img/6.jpg" alt=""> </a> </li>
-        <li class="col-sm-2 animated"> <a href="#" class="thumbnail"> <img src="/img/1.jpg" alt=""> </a> </li>
-        <li class="col-sm-2 animated"> <a href="#" class="thumbnail"> <img src="/img/2.jpg" alt=""> </a> </li>
-        <li class="col-sm-2 animated"> <a href="#" class="thumbnail"> <img src="/img/3.jpg" alt=""> </a> </li>
-        <li class="col-sm-2 animated"> <a href="#" class="thumbnail"> <img src="/img/4.jpg" alt=""> </a> </li>
-        <li class="col-sm-2 animated"> <a href="#" class="thumbnail"> <img src="/img/5.jpg" alt=""> </a> </li>
-        <li class="col-sm-2 animated"> <a href="#" class="thumbnail"> <img src="/img/6.jpg" alt=""> </a> </li>
-        <li class="col-sm-2 animated"> <a href="#" class="thumbnail"> <img src="/img/1.jpg" alt=""> </a> </li>
-        <li class="col-sm-2 animated"> <a href="#" class="thumbnail"> <img src="/img/2.jpg" alt=""> </a> </li>
-        <li class="col-sm-2 animated"> <a href="#" class="thumbnail"> <img src="/img/3.jpg" alt=""> </a> </li>
-        <li class="col-sm-2 animated"> <a href="#" class="thumbnail"> <img src="/img/4.jpg" alt=""> </a> </li>
-      </ul>
-      
-    </div>
-  </div>
-</div>
 </template>

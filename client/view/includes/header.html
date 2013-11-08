@@ -12,18 +12,28 @@
             </div>
             <div class="in collapse navbar-collapse" id="lib-example-navbar-collapse">
                 <ul class="nav pull-right navbar-nav">
-                    <li class="dropdown"><a class="bold text-muted">mail@gmail.com</a></li>
+                    
+                    {{#if currentUser}}
+                    <li class="dropdown"><a class="bold text-muted">{{ email }}</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="icon-user icon-white"></i> João Rangel <b class="caret"></b>
+                            <i class="icon-user icon-white"></i> {{ user.username }} <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu">
+                            <li><a href="javascript:;">Reader</a></li>
                             <li><a href="javascript:;">My Profile</a></li>
-                            <li><a href="javascript:;">My Groups</a></li>
                             <li class="divider"></li>
                             <li><a href="javascript:;">Logout</a></li>
                         </ul>
                     </li>
+                    {{else}}
+                    <li>
+                        <a data-target="#loginModal" role="button" data-toggle="modal" class="btn pull-right">
+                            Login
+                        </a>
+                    </li>
+                    {{/if}}
+
                 </ul>
             </div>
             <!--/.nav-collapse -->
