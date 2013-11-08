@@ -1,3 +1,115 @@
 <template name="book">
-    book
+    <div class="container wrap-container">
+        <div class="row">
+            <div id="breadcrumb">
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="http://www.pavothemes.com/demo/pav_floral/index.php?route=common/home">Home</a>
+                    </li>
+                    <li>
+                        <a href="http://www.pavothemes.com/demo/pav_floral/index.php?route=product/product&amp;product_id=48">Lorem ipsum dolor</a>
+                    </li>
+                </ol>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12  main-column">
+                <div id="content">
+                    <div class="product-info">
+                        <div class="row">
+                            <div class="col-lg-7 col-sm-6 image-container">
+                                <div class="image">
+                                    <a href="http://www.pavothemes.com/demo/pav_floral/image/cache/data/demo/product07-600x450.jpg" class="colorbox cboxElement">
+                                    <img src="http://www.pavothemes.com/demo/pav_floral/image/cache/data/demo/product07-500x375.jpg" title="Lorem ipsum dolor" alt="Lorem ipsum dolor" id="image" data-zoom-image="http://www.pavothemes.com/demo/pav_floral/image/cache/data/demo/product07-600x450.jpg" class="product-image-zoom">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-sm-6">
+                                <h3>Lorem ipsum dolor</h3>
+                                <div class="share clearfix">
+       
+                                    <div id="_atssh" style="visibility: hidden; height: 1px; width: 1px; position: absolute; z-index: 100000;"></div>
+                                    <!-- AddThis Button END --> 
+                                </div>
+                                <div class="description">
+                                    <span>Brand:</span>
+                                        <a href="http://www.pavothemes.com/demo/pav_floral/index.php?route=product/manufacturer/info&amp;manufacturer_id=8">Apple</a><br>
+                                    <span>Product Code:</span> product 20<br>
+                                    <span>Availability:</span> In Stock
+                                </div>
+                                <div class="price-cart">
+                                    <div class="price">$119.50</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs-group">
+                        <div id="tabs" class="htabs clearfix">
+                            <a href="#tab-description" class="selected" style="display: inline;">Description</a>
+                        </div>
+                        <div id="tab-description" class="tab-content" style="display: block;">
+                            <div class="cpt_product_description ">
+                            <div>
+                            <p>
+                                <strong>More room to move.</strong>
+                            </p>
+                            <p>
+                                With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.
+                            </p>
+                            <p>
+                                <strong>Cover Flow.</strong></p>
+                            <p>
+                                Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.</p>
+                            <p>
+                                <strong>Enhanced interface.</strong></p>
+                            <p>
+                                Experience a whole new way to browse and view your music and video.</p>
+                            <p>
+                                <strong>Sleeker design.</strong></p>
+                            <p>
+                                Beautiful, durable, and sleeker than ever, iPod classic now features an anodized aluminum and polished stainless steel enclosure with rounded edges.</p>
+                            </div>
+                            </div>
+                            <!-- cpt_container_end -->
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="col-lg-3 col-md-3 offcanvas-sidebar" id="oc-column-right">    
+                <div id="column-right" class="sidebar">
+                    <div class="box box-product special">
+                        <div class="box-heading"><span>Books</span></div>
+                        <div class="box-content">
+                            {{> booksOnRight}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+
+<template name="booksOnRight">
+
+    <div class="box-product">
+        <div class="row">
+            <div class=" col-lg-3">
+                <div class="product-block">
+                    <div class="image">
+                        <div class="product-label-special label">text_sale</div>
+                        <a href="http://www.pavothemes.com/demo/pav_floral/index.php?route=product/product&amp;product_id=42"><img src="http://www.pavothemes.com/demo/pav_floral/image/cache/data/demo/product01-160x120.jpg" title="Adipisicing elit sed" alt="Adipisicing elit sed"></a>
+                    </div>
+                    <h3 class="name">
+                        <a href="http://www.pavothemes.com/demo/pav_floral/index.php?route=product/product&amp;product_id=42">Adipisicing elit sed</a>
+                    </h3>
+                    <div class="rating">  aa  </div>
+                    <div class="price-cart">
+                        <div class="price">
+                            <span class="price-old">$119.50</span> <span class="price-new">$107.75</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+
 </template>
