@@ -28,7 +28,7 @@ function loadBooks(){
             {
                 author: 'author',
                 title: 'title',
-                status: BOOK.STATUS[1],
+                status: BOOK.STATUS[0],
                 description: 'description',
                 cover: '/img/2.jpg'//'img base64'
             },
@@ -42,7 +42,7 @@ function loadBooks(){
             {
                 author: 'author',
                 title: 'title',
-                status: BOOK.STATUS[1],
+                status: BOOK.STATUS[0],
                 description: 'description',
                 cover: '/img/4.jpg'//'img base64'
             },

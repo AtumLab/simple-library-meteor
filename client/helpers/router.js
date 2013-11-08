@@ -65,9 +65,12 @@ Router.map(function () {
             // before a new route is run
         },
         data: function () {
-            var params = this.params;
+            var params = this.params,
+            book = Books.findOne(params._id),
+            due = (book.status == BOOK.STATUS[1]) ? '' : 'disabled';
             return {
-                book: Books.findOne(params._id)
+                book: book,
+                isDue: due
             }
         }
 

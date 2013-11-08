@@ -37,6 +37,9 @@
                                 <div class="price-cart">
                                     <div class="price">$119.50</div>
                                 </div>
+                                {{#if currentUser}}
+                                    <button type="button" class="btn btn-info {{ isDue }}">Borrow</button>
+                                {{/if}}
                             </div>
                         </div>
                     </div>
