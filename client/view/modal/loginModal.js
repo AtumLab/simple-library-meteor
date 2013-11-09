@@ -26,9 +26,9 @@ Template.loginModal.events({
         evt.preventDefault();
         options = {};
 
-        var email = tmp.find('#emailInput').value.trim(),
-        password = tmp.find('#passwordInput').value;
-        console.log('password', password);
+        var email = tmp.find('#emailLoginInput').value.trim(),
+        password = tmp.find('#passwordLoginInput').value;
+        
         if(email.indexOf('@') == -1){
             options = {username: email};
         }

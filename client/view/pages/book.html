@@ -39,7 +39,7 @@
                                 </div>
                                 {{#if currentUser}}
                                     {{#if isStudent}}
-                                        <button type="button" class="btn btn-info {{ isDue }}">Borrow</button>
+                                        <button type="button" class="btn btn-info {{ isDue }}" data-target="#borrowBookModal" role="button" data-toggle="modal">Borrow</button>
                                     {{/if}}
                                     {{#if isManager}}
                                         <button type="button" class="btn btn-info">Edit</button>

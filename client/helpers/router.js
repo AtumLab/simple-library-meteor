@@ -36,6 +36,7 @@ Router.map(function () {
         load: function () {
             // called on first load
             console.log('load');
+            Session.set('selectBookID', this.params._id);
         },
 
         // before hooks are run before your action
@@ -69,6 +70,7 @@ Router.map(function () {
 
         unload: function () {
             // before a new route is run
+            Session.set('selectBookID', null);
         },
         data: function () {
             var params = this.params,

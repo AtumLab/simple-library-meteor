@@ -3,10 +3,11 @@
 {{#if currentUser}}
     {{#if isManager}}
         {{> addReaderModal}}
+        {{> addBookModal}}
     {{/if}}
 
     {{#if isStudent}}
-
+    	{{> borrowBookModal}}
     {{/if}}
 
 {{/if}}
