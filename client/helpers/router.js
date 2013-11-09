@@ -3,6 +3,10 @@ Router.configure({
     autoRender: false
 });
 
+Router.configure({
+  notFoundTemplate: 'notFound' // this will render
+});
+
 // this hook will run on almost all routes
 Router.before(checkLoggedIn, {except: ['login', 'signup', 'forgotPassword']});
 
@@ -37,7 +41,9 @@ Router.map(function () {
         // before hooks are run before your action
         before: [
             function () {
-                //this.subscribe('post', this.params._id).wait();
+                var book = Books.findOne(this.params._id);
+                if(!book)
+                    this.subscribe('books', this.params._id).wait();
                 //this.subscribe('posts'); // don't wait
             },
 
@@ -66,11 +72,19 @@ Router.map(function () {
         },
         data: function () {
             var params = this.params,
-            book = Books.findOne(params._id),
-            due = (book.status == BOOK.STATUS[1]) ? '' : 'disabled';
-            return {
-                book: book,
-                isDue: due
+            book = Books.findOne(params._id);
+            if(!book){
+                this.render('notFound');
+                // stop the rest of the before hooks and the action function 
+                this.stop();
+                return null;
+            }
+            else {
+                var due = (book.status == BOOK.STATUS[1]) ? '' : 'disabled';
+                return {
+                    book: book,
+                    isDue: due
+                }
             }
         }
 

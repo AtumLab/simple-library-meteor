@@ -18,7 +18,7 @@
                             <div class="col-lg-7 col-sm-6 image-container">
                                 <div class="image">
                                     <a href="http://www.pavothemes.com/demo/pav_floral/image/cache/data/demo/product07-600x450.jpg" class="colorbox cboxElement">
-                                    <img src="{{ book.cover }}" title="Lorem ipsum dolor" alt="Lorem ipsum dolor" id="image" data-zoom-image="http://www.pavothemes.com/demo/pav_floral/image/cache/data/demo/product07-600x450.jpg" class="product-image-zoom">
+                                    <img src="{{ book.cover }}" title="Lorem ipsum dolor" alt="Lorem ipsum dolor" id="image" class="product-image-zoom">
                                     </a>
                                 </div>
                             </div>
@@ -38,7 +38,13 @@
                                     <div class="price">$119.50</div>
                                 </div>
                                 {{#if currentUser}}
-                                    <button type="button" class="btn btn-info {{ isDue }}">Borrow</button>
+                                    {{#if isStudent}}
+                                        <button type="button" class="btn btn-info {{ isDue }}">Borrow</button>
+                                    {{/if}}
+                                    {{#if isManager}}
+                                        <button type="button" class="btn btn-info">Edit</button>
+                                    {{/if}}
+
                                 {{/if}}
                             </div>
                         </div>

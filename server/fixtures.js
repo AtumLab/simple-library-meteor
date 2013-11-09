@@ -1,22 +1,38 @@
 var rootURL = Meteor.absoluteUrl(),
 Users = Meteor.users;
 function loadUsers (){
+    console.log('--process : add users');
+    var id;
     if (!Users.findOne({username: 'admin'})) {
-        console.log('--process : add users');
-        Accounts.createUser({
+        id = Accounts.createUser({
             username: 'admin',
             password: 'admin',
-            email: 'particle4dev@gmail.com',
+            email: 'admin@gmail.com',
             profile: {
                 first_name: 'hoang',
                 last_name: 'le'
             }
         });
+        //add role
+        Roles.addUsersToRoles(id, USER.ROLES[0]);
+    }
+    if (!Users.findOne({username: 'reader'})) {
+        id = Accounts.createUser({
+            username: 'reader',
+            password: 'reader',
+            email: 'reader@gmail.com',
+            profile: {
+                first_name: 'hoang',
+                last_name: 'le'
+            }
+        });
+        //add role
+        Roles.addUsersToRoles(id, USER.ROLES[1]);
     }
 }
 function loadBooks(){
+    console.log('--process : add books collection');
     if (Books.find().count() == 0) {
-        console.log('--process : add books collection');
         [
             {
                 author: 'author',

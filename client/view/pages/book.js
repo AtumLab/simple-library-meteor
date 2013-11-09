@@ -3,3 +3,11 @@ Template.booksOnRight.helpers({
         return Books.find().fetch();
     }
 });
+Template.book.helpers({
+    isStudent: function(){
+        return isStudent();
+    },
+    isManager: function(){
+        return isManager();
+    }
+});

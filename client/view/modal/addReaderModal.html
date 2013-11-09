@@ -1,0 +1,35 @@
+<template name="addReaderModal">
+    <div class="modal fade" id="addReaderModal" tabindex="-1" role="dialog" aria-labelledby="addReaderModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 id="addReaderModalLabel" class="modal-title">ADD READER</h4>
+                </div>
+                <div class="modal-body">
+
+                    {{> addReaderModalBody}}
+            
+                </div>
+            </div>
+        </div>
+    </div><!-- /.addReaderModal -->
+</template>
+
+<template name="addReaderModalBody">
+    <div class="col-md-12">
+            <div class="form-login">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="emailInput" placeholder="Username / Email" />
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="passwordInput" placeholder="Password" />
+                </div>
+                <div class="pull-right">
+                    <button class="btn btn-primary" id="loginButton">Log In</button>
+                </div>
+            </div>
+    </div>
+
+    <div class="alert alert-error"></div>
+</template>

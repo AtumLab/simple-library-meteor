@@ -7,6 +7,12 @@ Template.header.helpers({
         if (user)
             return user.emails[0].address
         return '';
+    },
+    isStudent: function(){
+        return isStudent();
+    },
+    isManager: function(){
+        return isManager();
     }
 });
 

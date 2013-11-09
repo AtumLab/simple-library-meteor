@@ -20,9 +20,15 @@
                             <i class="icon-user icon-white"></i> {{ user.username }} <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="javascript:;">Reader</a></li>
-                            <li><a href="javascript:;">My Profile</a></li>
-                            <li class="divider"></li>
+                            {{#if isManager}}    
+                                <li>
+                                    <a data-target="#addReaderModal" role="button" data-toggle="modal">
+                                        Add Reader
+                                    </a>
+                                </li>
+                                <li><a href="javascript:;">Add Book</a></li>
+                                <li class="divider"></li>
+                            {{/if}}
                             <li><a href="#" id="logoutButton">Logout</a></li>
                         </ul>
                     </li>
