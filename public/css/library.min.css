@@ -730,3 +730,31 @@ font-size: 14px;
 #breadcrumb a {
 color: #3abec0;
 }
+
+/***
+ editYourAvatarModal
+ */
+#realImage {
+display: block;
+margin: 0px;
+}
+#avatarUserImg {
+display: block;
+margin: 0px;
+
+margin: 0 0 10px 0;
+}
+#previewFrame {
+margin: 0 1em;
+width: 160px;
+height: 230px;
+}
+#previewFrame #preview {
+width: 160px;
+height: 230px;
+overflow: hidden;
+}
+#previewFrame #preview img{
+width: 100%;
+height: auto;
+}

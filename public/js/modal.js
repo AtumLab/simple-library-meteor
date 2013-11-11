@@ -238,16 +238,13 @@
         $this.is(':visible') && $this.focus()
       })
   })
-  var stack = 0;
+
   $(document)
     .on('show.bs.modal',  '.modal', function () {
-      if(stack == 0)
-        $(document.body).addClass('modal-open')
-      stack ++;
+      $(document.body).addClass('modal-open')
     })
     .on('hidden.bs.modal', '.modal', function () {
-      stack --;
-      if(stack == 0)
+      if($('.modal.in').length == 0)
         $(document.body).removeClass('modal-open')
       else
         $(document.body).addClass('modal-open')

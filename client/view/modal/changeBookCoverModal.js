@@ -13,8 +13,8 @@ realImage,
 displayImage, 
 isShowCropAndButton = false,
 
-widthAvatar = 128,
-heightAvatar = 128;
+widthAvatar = 160,
+heightAvatar = 230;
 
 Template.changeBookCoverModalBody.image = function(){
   return Meteor.user().profile.image; 
