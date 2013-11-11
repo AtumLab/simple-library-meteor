@@ -1,7 +1,7 @@
 <template name="addBookModal">
 
     <div class="modal fade" id="addBookModal" tabindex="-1" role="dialog" aria-labelledby="addBookModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog" style="width: 80%;">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -9,11 +9,49 @@
                 </div>
                 <div class="modal-body">
 
-                    
+                    {{> addBookModalBody}}
             
                 </div>
             </div>
         </div>
     </div><!-- /.addBookModal -->
 
+</template>
+<template name="addBookModalBody">
+    <div class="row product-info">
+        
+        <div class="col-lg-4 col-sm-4 image-container">
+            <div class="image">
+                <a class="colorbox cboxElement">
+                    <img src="/img/cover.jpg" title="" alt="" id="" class="" style="width: 155px;"/>
+                </a>
+            </div>
+            <button data-target="#changeBookCoverModal" role="button" data-toggle="modal" class="btn btn-primary" style="margin: 0 auto; display: block;">Change Book Cover</button>
+        </div>
+
+        <div class="col-lg-8 col-sm-8">
+            
+            <div class="form-book">
+
+                <div class="form-group">
+                    <input type="text" class="form-control" id="authorInput" placeholder="Author">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="titleInput" placeholder="Title">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="statusInput" placeholder="Status">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="descriptionInput" placeholder="Description">
+                </div>
+
+            </div>
+
+            <div class="price"></div>
+            <button type="button" class="btn btn-info pull-right">Save</button>
+                                            
+        </div>
+
+    </div>
 </template>

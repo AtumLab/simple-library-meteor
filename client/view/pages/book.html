@@ -15,14 +15,14 @@
                 <div id="content">
                     <div class="product-info">
                         <div class="row">
-                            <div class="col-lg-7 col-sm-6 image-container">
+                            <div class="col-lg-4 col-sm-4 image-container">
                                 <div class="image">
-                                    <a href="http://www.pavothemes.com/demo/pav_floral/image/cache/data/demo/product07-600x450.jpg" class="colorbox cboxElement">
-                                    <img src="{{ book.cover }}" title="Lorem ipsum dolor" alt="Lorem ipsum dolor" id="image" class="product-image-zoom">
+                                    <a class="colorbox cboxElement">
+                                        <img src="{{ book.cover }}" title="" alt="" class="" style="width: 155px; height: 195px;"/>
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-lg-5 col-sm-6">
+                            <div class="col-lg-8 col-sm-8">
                                 <h3>{{ book.title }}</h3>
                                 <div class="share clearfix">
        
@@ -31,18 +31,16 @@
                                 </div>
                                 <div class="description">
                                     <span>Author:</span> {{ book.author }}<br/>
-                                    <span>Product Code:</span> product 20<br/>
-                                    <span>Availability:</span> In Stock
                                 </div>
                                 <div class="price-cart">
-                                    <div class="price">$119.50</div>
+                                    <div class="price"></div>
                                 </div>
                                 {{#if currentUser}}
                                     {{#if isStudent}}
-                                        <button type="button" class="btn btn-info {{ isDue }}" data-target="#borrowBookModal" role="button" data-toggle="modal">Borrow</button>
+                                        <button type="button" class="btn btn-info {{ isDue }} pull-right" data-target="#borrowBookModal" role="button" data-toggle="modal">Borrow</button>
                                     {{/if}}
                                     {{#if isManager}}
-                                        <button type="button" class="btn btn-info">Edit</button>
+                                        <button type="button" class="btn btn-info pull-right">Edit</button>
                                     {{/if}}
 
                                 {{/if}}
@@ -53,10 +51,11 @@
                         <div id="tabs" class="htabs clearfix">
                             <a href="#tab-description" class="selected" style="display: inline;">Description</a>
                         </div>
-                        <div id="tab-description" class="tab-content" style="display: block;">
+                        <div id="tab-description" class="tab-content"
+                            style="display: block; margin-top: 10px;">
                             <div class="cpt_product_description ">
                             <div>
-                                {{ book.description }}
+                                {{ safeString book.description }}
                             </div>
                             </div>
                             <!-- cpt_container_end -->
@@ -96,11 +95,7 @@
                         <a href="{{pathFor 'book'}}">{{ title }}</a>
                     </h3>
                     <div class="rating">{{ author }}</div>
-                    <div class="price-cart">
-                        <div class="price">
-                            <span class="price-old">$119.50</span> <span class="price-new">$107.75</span>
-                        </div>
-                    </div>
+
                 </div>
             </div>
             {{/each}}
