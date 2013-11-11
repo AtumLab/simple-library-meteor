@@ -1,6 +1,7 @@
 Demo site: http://library-particle4dev.meteor.com/
 
 Librarian
-    admin/admin
+  *  admin/admin
+
 Reader
-    reader/reader
+   * reader/reader
