@@ -1,6 +1,6 @@
 Template.booksOnRight.helpers({
     books: function(){
-        return Books.find().fetch();
+        return Books.find({}, {sort: {updated: -1}}).fetch();
     }
 });
 Template.book.helpers({

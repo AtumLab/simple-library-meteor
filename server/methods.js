@@ -20,6 +20,27 @@ Meteor.methods({
             throw e;
         }
     },
+    addBook: function(book){
+        var id = this.userId;
+        if (!id) {
+            throw new Meteor.Error(403, "You must be logged in");
+        }
+        if(!isManager())
+            throw new Meteor.Error(403, "Your account does not support this feature");
+        BooksModal.insert(book);
+        
+        return true;
+    },
+    updateBook: function(idBook, book){
+        var id = this.userId;
+        if (!id) {
+            throw new Meteor.Error(403, "You must be logged in");
+        }
+        if(!isManager())
+            throw new Meteor.Error(403, "Your account does not support this feature");
+        BooksModal.update(idBook, book);
+        return true;
+    },
     insertAccount: function(object) {
         var id = this.userId;
         if (!id) {

@@ -1,0 +1,65 @@
+<template name="editBookModal">
+
+    <div class="modal fade" id="editBookModal" tabindex="-1" role="dialog" aria-labelledby="editBookModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="width: 80%;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 id="editBookModalLabel" class="modal-title">ADD BOOK</h4>
+                </div>
+                <div class="modal-body">
+
+                    {{> editBookModalBody}}
+            
+                </div>
+            </div>
+        </div>
+    </div><!-- /.editBookModal -->
+
+</template>
+<template name="editBookModalBody">
+    <div class="row product-info">
+        
+        <div class="col-lg-4 col-sm-4 image-container">
+            <div class="image">
+                <a class="colorbox cboxElement">
+                    <img src="{{ book.cover }}" title="" alt="" id="coverEditBookImg" class="" style="width: 155px;"/>
+                </a>
+            </div>
+            <input type="file" name="coverEditFile" class="hide" />
+            <button id="changeCoverEditButton" role="button" class="btn btn-primary" style="margin: 0 auto; display: block;">Change Book Cover</button>
+        </div>
+
+        <div class="col-lg-8 col-sm-8">
+            
+            <div class="form-book">
+
+                <div class="form-group">
+                    <input type="text" class="form-control" id="authorEditInput" placeholder="Author" value="{{ book.author }}">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="titleEditInput" placeholder="Title" value="{{ book.title }}">
+                </div>
+                <div class="form-group">
+                    <select class="form-control" id="statusEditInput">
+                    {{#each status}}
+                        <option value="{{ this }}">{{ this }}</option>
+                    {{/each}}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="descriptionEditInput" placeholder="Description"value="{{ book.description }}">
+                </div>
+
+            </div>
+
+            <div class="price"></div>
+            <div class="col-md-9 error"></div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-info pull-right" id="saveBookButton">Save</button>
+            </div>
+                          
+        </div>
+
+    </div>
+</template>

@@ -63,7 +63,6 @@ Router.map(function () {
             var params = this.params; // including query params
             var hash = this.hash;
             var isFirstRun = this.isFirstRun;
-
             
             this.render('book');
         },
